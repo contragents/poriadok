@@ -1,4 +1,10 @@
 <?php
+/**
+ * В случае одинакового числа повторов символа результат непредсказуем,
+ * например у ТОП1 символа число повторов равно ТОП2 символу и равно ТОП3 символу
+ * пример - слово milklim - символы m,i,l имеют одинаковое число повторов
+ */
+
 // API version
 if (isset($_GET['string'])) {
     print json_encode(['status' => 'success', 'result' => pred_max($_GET['string'])], JSON_UNESCAPED_UNICODE);
