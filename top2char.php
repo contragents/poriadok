@@ -1,7 +1,7 @@
 <?php
 // API version
 if (isset($_GET['string'])) {
-    print json_encode(['status' => 'success', 'result' => pred_max($_GET['string'])]);
+    print json_encode(['status' => 'success', 'result' => pred_max($_GET['string'])], JSON_UNESCAPED_UNICODE);
     exit();
 }
 

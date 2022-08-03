@@ -8,9 +8,9 @@
 // API version
 if (isset($_GET['string'])) {
     if (palindrom($_GET['string'])) {
-        print json_encode(['status' => 'success', 'result' => $_GET['string'] . ' - Палиндром']);
+        print json_encode(['status' => 'success', 'result' => $_GET['string'] . ' - Палиндром'], JSON_UNESCAPED_UNICODE);
     } else {
-        print json_encode(['status' => 'error', 'result' => $_GET['string'] . ' - Не палиндром']);
+        print json_encode(['status' => 'error', 'result' => $_GET['string'] . ' - Не палиндром'], JSON_UNESCAPED_UNICODE);
     }
 
     exit();
